@@ -1,19 +1,19 @@
-#include<stdio.h>
-int main()
-{
-    for (int j =1;j<=4;j++)
-    {
-        for (int k=1;k<=4-j;k++)
-        {
+#include <stdio.h>
+
+int main() {
+    int n = 4; // number of rows
+    
+    for (int i = 1; i <= n; i++) {
+        // print spaces
+        for (int j = i; j < n; j++) {
             printf(" ");
-
         }
-        for(int i=1;i<=4;i++)
-        {
+        // print stars
+        for (int k = 1; k <= i; k++) {
             printf("*");
-
         }
         printf("\n");
     }
+    
     return 0;
 }
