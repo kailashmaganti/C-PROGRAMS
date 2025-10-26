@@ -2,20 +2,24 @@
 int main()
 {
     int n;
-    int sum=0;
-    printf("enter number of elements ");
-    scanf("%d",&n);
-    int a[n];
-    printf("enter marks");
-
-    for(int i=0;i<n;i++)
+    int sum[2][2];
+    int a[2][2]={{1,2},{3,4}};
+    int b[2][2]={{5,6},{7,8}};
+    
+    for(int i=0;i<2;i++)
     {
-        scanf("%d",&a[i]);
+        for(int j=0;j<2;j++)
+        {
+            sum[i][j]=a[i][j]+b[i][j];
+        }
     }
-    for(int i=0;i<5;i++)
+    for(int i=1;i<2;i++)
     {
-        sum=sum+a[i];
+        for(int j=0;j<2;j++)
+        {
+            printf("%d",sum[i][j]);
+        }
+        printf("\n");
     }
-    printf("sum= %d",sum);
     return 0;
 }

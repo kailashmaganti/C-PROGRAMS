@@ -1,9 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    int n,a[n];
+    int n;
     printf("enter number of elements ");
     scanf("%d",&n);
+    int a[n];
 
     for(int i=0;i<n;i++)
     {
