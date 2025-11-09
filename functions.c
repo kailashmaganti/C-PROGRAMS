@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include<string.h>
+#include <math.h>
 void factorial();
 void sumdigits();
 void reverse();
@@ -9,7 +10,8 @@ void fibonacci();
 void multiplicationtable();
 void armstrong();
 
-int main() {
+int main()
+ {
     int x;
     printf("Enter 1 for factorial\n");
     printf("Enter 2 for sum of digits\n");
@@ -21,7 +23,8 @@ int main() {
     printf("Enter 8 for armstrong number or not\n");
     scanf("%d", &x);
 
-    switch (x) {
+    switch (x) 
+    {
         case 1: factorial(); break;
         case 2: sumdigits(); break;
         case 3: reverse(); break;
@@ -39,8 +42,9 @@ void factorial() {
     int n, fact = 1;
     printf("Enter a number: ");
     scanf("%d", &n);
-    for (int i = 1; i <= n; i++) {
-        fact *= i;
+    for (int i = 1; i <= n; i++) 
+    {
+        fact = fact*i;
     }
     printf("The factorial is %d\n", fact);
 }
@@ -49,10 +53,11 @@ void sumdigits() {
     int n, r, sum = 0;
     printf("Enter a number: ");
     scanf("%d", &n);
-    while (n > 0) {
+    while (n != 0)
+     {
         r = n % 10;
-        sum += r;
-        n /= 10;
+        sum =sum+ r;
+        n = n/10;
     }
     printf("The sum of digits is %d\n", sum);
 }
@@ -61,7 +66,8 @@ void reverse() {
     int n, r, rev = 0;
     printf("Enter a number: ");
     scanf("%d", &n);
-    while (n > 0) {
+    while (n !=0)
+    {
         r = n % 10;
         rev = rev * 10 + r;
         n /= 10;
@@ -119,7 +125,7 @@ void armstrong() {
     temp = n;
     while (n > 0) {
         r = n % 10;
-        sum += r * r * r;
+        sum = sum+ pow(r,3);
         n /= 10;
     }
     if (sum == temp)
