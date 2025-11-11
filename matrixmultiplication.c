@@ -13,6 +13,7 @@ int main()
     {
         printf("matrix multiplication not possible");
     }
+    else{
     printf("enter values of matrix a");
     for(int i=0;i<r1;i++)
     {
@@ -42,7 +43,7 @@ int main()
         {
             for(int k=0;k<c1;k++)
             {
-                product[i][j]=a[i][k]*b[k][j];
+                product[i][j]+=a[i][k]*b[k][j];
             }
         }
     }
@@ -54,6 +55,6 @@ int main()
             printf("%4d",product[i][j]);
         }
         printf("\n");
-    }
+    }}
     return 0;
 }
